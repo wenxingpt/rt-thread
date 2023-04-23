@@ -107,7 +107,7 @@ def GetGCCLibcNameVersion(rtconfig):
     if rtconfig.PLATFORM != 'gcc':
         return ('unknown', 'unknown')
 
-    mlibc_version = GetMlibcVersion()
+    mlibc_version = GetMlibcVersion(rtconfig)
     if mlibc_version != 'unknown':
         return ('mlibc', mlibc_version)
 
